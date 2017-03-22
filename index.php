@@ -1,8 +1,12 @@
 <?php
 
-// Affichage
+require 'Modele.php';
 
-require 'modele.php';
-$billets = getBillet();
-require 'vueAccueil.php';
-?>
+try {
+  $billets = getBillets();
+  require 'vueAccueil.php';
+}
+catch (Exception $e) {
+  $msgErreur = $e->getMessage();
+  require 'vueErreur.php';
+}
