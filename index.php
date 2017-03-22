@@ -1,8 +1,8 @@
 <?php
 
 // Affichage
-require 'vueAccueil.php';
-require 'modele.php';
 
+require 'modele.php';
 $billets = getBillet();
+require 'vueAccueil.php';
 ?>
